@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slides Application</title>
+    <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+
+    <!-- Main page for creating and editing slides -->
+    <div id="editor-screen">
+
+        <div class="top-bar">
+            <h1>Slides Application</h1>
+
+            <div>
+                <span id="save-message"></span>
+                <button id="new-btn">New</button>
+                <button id="save-btn">Save</button>
+                <button id="present-btn">Present</button>
+            </div>
+        </div>
+
+        <div class="main">
+
+            <!-- To write slide content here -->
+            <div class="section">
+                <h2>Markdown</h2>
+                <textarea id="editor"></textarea>
+            </div>
+
+            <!-- Slides will appear here -->
+            <div class="section">
+                <h2>Preview</h2>
+                <div id="preview" class="slide"></div>
+
+                <div class="controls">
+                    <button id="left-btn">&lt; Left</button>
+                    <span id="slide-count">1 / 1</span>
+                    <button id="right-btn">Right &gt;</button>
+                    <button id="fullscreen-btn">Full Screen</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- This screen appears when Present is clicked -->
+    <div id="presentation-screen" class="hidden">
+
+        <div id="present-slide" class="slide"></div>
+
+        <div class="controls">
+            <button id="present-left-btn">&lt; Left</button>
+            <span id="present-slide-count">1 / 1</span>
+            <button id="present-right-btn">Right &gt;</button>
+            <button id="present-fullscreen-btn">Exit Full Screen</button>
+        </div>
+
+    </div>
+
+    <script src="slides.js"></script>
+</body>
+</html>
